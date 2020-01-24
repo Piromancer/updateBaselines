@@ -1,0 +1,8 @@
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.tool) }}
+    {{ render_field(form.job(**{"onchange":"refreshJob(this)"}) }}
+  </dl>
+  <p><input type=submit value=Start>
+</form>
